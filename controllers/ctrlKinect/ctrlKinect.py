@@ -3,7 +3,7 @@ from controller import RangeFinder
 from controller import Robot,Camera
 import numpy as np
 import cv2
-import matplotlib.pyplot as plt
+
 class Enumerate(object):
     def __init__(self, names):
         for number, name in enumerate(names.split()):
@@ -45,8 +45,14 @@ class Slave (Robot):
               iteration=iteration+1
               self.step(self.timeStep)
               image=self.kinectrange.getRangeImage()
-              kinectvalue=self.kinectrange.rangeImageGetDepth(image,200 , 50, 55)
-              print(kinectvalue)
+              print(len(image))
+              cnt=0;                   
+              for i in range(320):
+                  for j in range(190):                      
+                      kinectvalue=self.kinectrange.rangeImageGetDepth(image,320 , i, j)
+                      cnt+=1
+                      print("i= "+str(i)+"  j= "+str(j)+ "    value=" + str(kinectvalue))
+              print("counter = "+str(cnt))
               self.motors[0].setVelocity(3)#right
               self.motors[1].setVelocity(2)#left
               self.motors[2].setVelocity(3)#right
