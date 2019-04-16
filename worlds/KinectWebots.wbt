@@ -1,0 +1,694 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+  info [
+    "The user drives a Supervisor by the Keyboard which drives slaves robots by using an emitter device."
+  ]
+  title "Omniscience"
+}
+Viewpoint {
+  orientation -0.2612727451772148 0.9367843733679931 0.23274791178676282 1.5205107620670413
+  position 10.281688657036138 4.1838359503895495 -9.846421340554919
+}
+Background {
+  skyColor [
+    0.4 0.7 1
+  ]
+}
+PointLight {
+  ambientIntensity 0.4
+  intensity 0.5
+  location 1 3 2
+  castShadows TRUE
+}
+PointLight {
+  ambientIntensity 0.4
+  intensity 0.6
+  location -1 2.5 -2
+}
+CircleArena {
+  radius 12
+  floorAppearance NULL
+  floorTileSize 30 30
+  wallThickness 0.04
+  wallHeight 0.5
+}
+DEF GROUND_soft_loop_train Solid {
+  translation -4.172753487073635 0.09999999999999823 0.22190855541365728
+  rotation 0 1 0 6.27458
+  scale 2 2 2
+  children [
+    DEF GROUND_SHAPE Group {
+      children [
+        Transform {
+          translation -5 0 -8
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 1 1 1
+                }
+                texture ImageTexture {
+                  url [
+                    "textures/lightwood.jpg"
+                  ]
+                  repeatS FALSE
+                  repeatT FALSE
+                }
+                textureTransform TextureTransform {
+                }
+              }
+              geometry ElevationGrid {
+                height [
+                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+                ]
+                xDimension 150
+                xSpacing 0.1
+                zDimension 150
+                zSpacing 0.1
+              }
+            }
+          ]
+        }
+        Shape {
+          geometry Plane {
+          }
+        }
+      ]
+    }
+  ]
+  boundingObject DEF GROUND_SHAPE Group {
+    children [
+      Transform {
+        translation -5 0 -8
+        children [
+          Shape {
+            appearance Appearance {
+              material Material {
+              }
+              texture ImageTexture {
+                url [
+                  "textures/grass.jpg"
+                ]
+              }
+              textureTransform TextureTransform {
+                scale 5 5
+              }
+            }
+            geometry ElevationGrid {
+              height [
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+              ]
+              xDimension 150
+              xSpacing 0.1
+              zDimension 150
+              zSpacing 0.1
+            }
+          }
+        ]
+      }
+      Shape {
+        appearance Appearance {
+          material Material {
+          }
+          texture ImageTexture {
+            url [
+              "textures/grass.png"
+            ]
+          }
+          textureTransform TextureTransform {
+            scale 10 10
+          }
+        }
+        geometry Plane {
+        }
+      }
+    ]
+  }
+}
+WoodenBox {
+  translation 7.67284036632443 0.2399999999999991 -5.67090837232031
+  rotation 0 1 0 4.96782
+  name "wooden box(37)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation 3.646942763911464 0.2399999999999991 -9.044088314337461
+  rotation 0 1 0 4.96782
+  name "wooden box(36)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation 6.172355717015701 0.23999999999999644 -2.8026553096712314
+  rotation 0 1 0 4.96782
+  name "wooden box(34)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation 1.4116317954599316 0.2399999999999991 -6.060586786452088
+  rotation 0 1 0 4.96782
+  name "wooden box(33)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation 5.8762923743821665 0.2100000000000005 7.328338468963857
+  rotation 0 1 0 0.5
+  name "wooden box(31)"
+}
+WoodenBox {
+  translation 7.917484974759871 0.20999999999999916 7.369492080154232
+  rotation 0 1 0 0.5
+  name "wooden box(30)"
+}
+WoodenBox {
+  translation -1.2276556393174864 0.23999999999999644 -0.37541954167503366
+  rotation 0 1 0 4.96782
+  name "wooden box(28)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation 3.8291296042732488 0.20999999999999916 7.641845250973484
+  rotation 0 1 0 0.5
+  name "wooden box(27)"
+}
+WoodenBox {
+  translation -0.4290876359277238 0.25000000000000255 4.967203581404885
+  rotation 0 1 0 5.36782
+  name "wooden box(25)"
+  size 0.5 0.5 0.5
+}
+WoodenBox {
+  translation -6.214794125395377 0.2499999999999999 -5.580575236709001
+  rotation 0 1 0 5.36782
+  name "wooden box(22)"
+  size 0.5 0.5 0.5
+}
+WoodenBox {
+  translation -3.2497074510420227 0.2499999999999999 -2.019112804866305
+  rotation 0 1 0 5.36782
+  name "wooden box(21)"
+  size 0.5 0.5 0.5
+}
+WoodenBox {
+  translation -1.9480858878919227 0.24999999999999944 1.8679373814376097
+  rotation 0 1 0 5.36782
+  name "wooden box(19)"
+  size 0.5 0.5 0.5
+}
+WoodenBox {
+  translation -4.827796494985186 0.2500000000000008 8.2881492957214
+  rotation 0 1 0 5.36782
+  name "wooden box(20)"
+  size 0.5 0.5 0.5
+}
+WoodenBox {
+  translation -5.836100946298549 0.24999999999999634 -0.6831459847280257
+  rotation 0 1 0 5.36782
+  name "wooden box(18)"
+  size 0.5 0.5 0.5
+}
+WoodenBox {
+  translation -6.517601715693285 0.2399999999999991 5.411912437046221
+  rotation 0 1 0 4.96782
+  name "wooden box(16)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation -3.8472172848813218 0.23999999999999644 0.27677855408659724
+  rotation 0 1 0 4.96782
+  name "wooden box(15)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation -4.775819422040458 0.23999999999999644 2.366786043876729
+  rotation 0 1 0 4.96782
+  name "wooden box(29)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation -9.205815658777631 0.2399999999999991 0.05026340134849905
+  rotation 0 1 0 4.96782
+  name "wooden box(14)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation 1.1182103731550639 0.24 -8.706603293844104
+  rotation 0 1 0 4.96782
+  name "wooden box(9)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation 5.668581100059222 0.24 -5.825614212630018
+  rotation 0 1 0 4.96782
+  name "wooden box(10)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation 8.639328463323327 0.23999999999999821 -3.7894134738892893
+  rotation 0 1 0 4.96782
+  name "wooden box(35)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation 7.240906911424839 0.24 -8.09072415471637
+  rotation 0 1 0 4.96782
+  name "wooden box(32)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation 4.225323505310237 0.2399999999999991 -0.8487335458116387
+  rotation 0 1 0 4.96782
+  name "wooden box(11)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation -3.037124166546038 0.24 -8.769986062841241
+  rotation 0 1 0 4.96782
+  name "wooden box(12)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation -8.409477172759242 0.2399999999999991 -3.6322273330992507
+  rotation 0 1 0 4.96782
+  name "wooden box(13)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation -0.013273159988057337 0.049999999999999115 10.733726948994722
+  rotation 0 1 0 5.36782
+  name "wooden box(8)"
+  size 0.5 0.7999999999999999 0.5
+}
+WoodenBox {
+  translation 10.715055449887977 0.1800000000000018 -1.4128225297138886
+  rotation 0 1 0 0.5
+  name "wooden box(6)"
+  size 0.6 0.7 0.6
+}
+WoodenBox {
+  translation 2.3639511992004003 0.25000000000000255 2.039817260207233
+  rotation 0 1 0 5.36782
+  name "wooden box(5)"
+  size 0.5 0.5 0.5
+}
+WoodenBox {
+  translation 2.99087920124361 0.25000000000000255 4.84492976243544
+  rotation 0 1 0 5.36782
+  name "wooden box(24)"
+  size 0.5 0.5 0.5
+}
+WoodenBox {
+  translation 0.17508745943484216 0.2499999999999999 3.0130943592975203
+  rotation 0 1 0 5.36782
+  name "wooden box(23)"
+  size 0.5 0.5 0.5
+}
+WoodenBox {
+  translation -8.577679357445792 0.2499999999999999 3.556141157969475
+  rotation 0 1 0 5.36782
+  name "wooden box(17)"
+  size 0.5 0.5 0.5
+}
+WoodenBox {
+  translation 1.115848630408005 0.20999999999999916 7.3248761052404525
+  rotation 0 1 0 0.5
+}
+WoodenBox {
+  translation 8.930829610180233 0.05 3.4912020044936956
+  rotation 0 1 0 0.5
+  name "wooden box(7)"
+  size 0.7000000000000001 0.9 0.6
+}
+WoodenBox {
+  translation 5.86866135442544 0.05 1.4162958770889982
+  rotation 0 1 0 0.5
+  name "wooden box(26)"
+  size 0.7000000000000001 0.9 0.6
+}
+WoodenBox {
+  translation -0.7392303127563966 0.24 -5.026819177373328
+  rotation 0 1 0 4.96782
+  name "wooden box(1)"
+  size 0.5 0.7 0.5
+}
+WoodenBox {
+  translation 2.0653793085326346 0.2800000000000045 -3.7290080658300755
+  rotation 0 1 0 5.36782
+  name "wooden box(2)"
+  size 0.6 0.7 0.5
+}
+WoodenBox {
+  translation -2.4306915649777068 0.05000000000000178 -4.075364453241324
+  rotation 0 1 0 5.36782
+  name "wooden box(3)"
+  size 0.7 1.1 0.5
+}
+WoodenBox {
+  translation 0.29468586408535213 0.049999999999999115 -1.3382314345201558
+  rotation 0 1 0 5.36782
+  name "wooden box(4)"
+  size 0.5 0.9 0.5
+}
+Robot {
+  children [
+    Emitter {
+    }
+  ]
+  name "Driver"
+  controller "supervisor"
+  supervisor TRUE
+}
+DEF ROBOT1 Robot {
+  translation -4.827688468147628 0.08892672823921377 -10.170904872343604
+  rotation -0.0003688836248596578 -0.9999993753883148 0.0010550582218612767 -2.010399945555981
+  scale 5 5 5
+  children [
+    DEF MAIN_BODY Transform {
+      translation 0 0.0415 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.0820075 0.364731 0.8
+            }
+          }
+          geometry DEF BODY Cylinder {
+            height 0.08
+            radius 0.045
+          }
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 53296.039008936365
+        axis -1 0 0
+        anchor 0 0.025 0
+      }
+      device [
+        RotationalMotor {
+          name "left wheel motor"
+        }
+        PositionSensor {
+          name "left wheel sensor"
+        }
+      ]
+      endPoint DEF LEFT_WHEEL Solid {
+        translation -0.045024824230469024 0.02489882449498284 -0.0001266296164744667
+        rotation 0.9999982524361413 -0.0015742634725214508 0.0010083745249858417 5.649352714073889
+        children [
+          DEF WHEEL Transform {
+            rotation 0 0 1 1.57
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    diffuseColor 1 0 0
+                  }
+                }
+                geometry Cylinder {
+                  height 0.01
+                  radius 0.025
+                }
+              }
+            ]
+          }
+        ]
+        name "left wheel"
+        boundingObject DEF WHEEL Transform {
+          rotation 0 0 1 1.57
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 1 0 0
+                }
+              }
+              geometry Cylinder {
+                height 0.01
+                radius 0.025
+              }
+            }
+          ]
+        }
+        physics DEF PHYSICS_WHEEL Physics {
+          density -1
+          mass 0.05
+        }
+        linearVelocity -0.11201326437932413 -0.0003244808244905387 0.052584370676586466
+        angularVelocity 0.4223571538997269 0.004485755639578771 0.8978328937123011
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 50096.68131312286
+        axis -1 0 0
+        anchor 0 0.025 0
+      }
+      device [
+        RotationalMotor {
+          name "right wheel motor"
+        }
+        PositionSensor {
+          name "right wheel sensor"
+        }
+      ]
+      endPoint DEF RIGHT_WHEEL Solid {
+        translation 0.044976548196291724 0.024927753145972037 -0.00015546622051672434
+        rotation -0.9999900217874189 0.0044609225182282355 0.00023768862752283914 0.3198984907686525
+        children [
+          DEF WHEEL Transform {
+            rotation 0 0 1 1.57
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    diffuseColor 1 0 0
+                  }
+                }
+                geometry Cylinder {
+                  height 0.01
+                  radius 0.025
+                }
+              }
+            ]
+          }
+        ]
+        name "right wheel"
+        boundingObject USE WHEEL
+        physics DEF PHYSICS_WHEEL Physics {
+          density -1
+          mass 0.05
+        }
+        linearVelocity -0.11374892927077539 -0.0003765771646015428 0.05340016602636951
+        angularVelocity 0.4290434996339221 0.0043484362870453465 0.911782772238538
+      }
+    }
+    DEF LEFT_EYE DistanceSensor {
+      translation -0.02 0.063 -0.042
+      rotation 0 1 0 2.07
+      children [
+        DEF INFRARED Transform {
+          rotation 0 0 1 1.57
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.975691 0.981481 0.0252992
+                }
+              }
+              geometry Cylinder {
+                height 0.004
+                radius 0.008
+              }
+            }
+          ]
+        }
+      ]
+      name "ds0"
+      lookupTable [
+        0 1024 0
+        0.05 1024 0
+        0.15 0 0
+      ]
+      numberOfRays 2
+      aperture 1
+    }
+    DEF RIGHT_EYE DistanceSensor {
+      translation 0.02 0.063 -0.042
+      rotation 0 1 0 1.07
+      children [
+        DEF INFRARED Transform {
+          rotation 0 0 1 1.57
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.975691 0.981481 0.0252992
+                }
+              }
+              geometry Cylinder {
+                height 0.004
+                radius 0.008
+              }
+            }
+          ]
+        }
+      ]
+      name "ds1"
+      lookupTable [
+        0 1024 0
+        0.05 1024 0
+        0.15 0 0
+      ]
+      numberOfRays 2
+      aperture 1
+    }
+    Receiver {
+    }
+  ]
+  name "robot1"
+  boundingObject DEF MYBOT_BOUNDING Transform {
+    translation 0 0.0415 0
+    children [
+      DEF BODY Cylinder {
+        height 0.08
+        radius 0.045
+      }
+    ]
+  }
+  physics DEF MYBOT_PHYSICS Physics {
+    density -1
+    mass 0.5
+  }
+  controller "slave"
+  linearVelocity -0.11327707437263532 0.00035087294344450233 0.053201680514567896
+  angularVelocity 0.00023913360437321243 0.003965746165070939 -4.332128980571985e-06
+}
+DEF PIONEER_3AT Pioneer3at {
+  hidden position_0_1 14005.284854358122
+  hidden position_0_2 14725.821165502279
+  hidden position_0_3 14048.6287799569
+  hidden position_0_4 14646.627036442187
+  hidden linearVelocity_0 0.25830437641760956 0.0001436558525283675 0.10886918879032245
+  hidden angularVelocity_0 0.000196810747746971 0.1866959132145282 -0.0015610275777213332
+  hidden position_1_0 3.6818631457685237e-13
+  hidden linearVelocity_2 0.2594199505229107 0.00015226286745851654 0.11003961520808123
+  hidden angularVelocity_2 0.00019681074684877608 0.18669591321048648 -0.001561027581604116
+  hidden linearVelocity_6 0.2747251230618587 -0.00023815772639609236 0.06525399542871324
+  hidden angularVelocity_6 0.0001968106894455387 0.18669591310499403 -0.0015610276010882625
+  hidden translation_11 -0.19700057685367156 -8.455514393830228e-07 0.13308732132121126
+  hidden rotation_11 -0.9999999998569746 -5.904992729506055e-06 -1.5848718309250254e-05 3.050103547931196
+  hidden linearVelocity_11 0.21447628704224703 3.7920529223783906e-05 0.12054356025381592
+  hidden angularVelocity_11 0.7015294651899456 0.1886246503126391 -1.8745864499906364
+  hidden translation_12 0.19707807039692504 8.471872572339537e-05 0.13306364961297884
+  hidden rotation_12 0.9999999996746246 -5.629836903369518e-06 -2.4880834309402325e-05 4.976719150253512
+  hidden linearVelocity_12 0.2835446801527276 -3.435174756739312e-05 0.1463779883417361
+  hidden angularVelocity_12 1.052945677756813 0.19047442067938045 -2.8107718063688005
+  hidden translation_13 -0.19699870139512043 6.661342612290911e-05 -0.1330683970578498
+  hidden rotation_13 0.9999999995577725 2.7890892033437214e-05 1.0322462775918854e-05 4.965526415015958
+  hidden linearVelocity_13 0.23199040276524277 -2.7940706294755195e-05 0.07406401999946569
+  hidden angularVelocity_13 0.7015298407823363 0.18860898308556423 -1.8746055178841439
+  hidden translation_14 0.19691761249833206 5.764775451786061e-05 -0.13311828142700827
+  hidden rotation_14 -0.9999999999631897 8.013071707875456e-06 -3.06778087845596e-06 4.023226633200316
+  hidden linearVelocity_14 0.3009312633654892 2.467591506330345e-05 0.09984975815767458
+  hidden angularVelocity_14 1.052930887515793 0.19044473947158183 -2.8107610110352796
+  translation 3.0524173681862696 0.20859937446587587 -8.923270959426224
+  rotation 0.00062902045355902 0.9999992852086673 0.0010168163174392045 -1.9257751569672878
+  name "PIONEER_3AT"
+  controller "ctrlKinect"
+  supervisor TRUE
+  extensionSlot [
+    Kinect {
+      translation 0 1 0
+    }
+    InertialUnit {
+      translation 0 0.18 -0.21500000023974483
+      rotation 0 -1 0 4.712389004359173
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 1 0
+            }
+            texture ImageTexture {
+              url [
+                "textures/imu.png"
+              ]
+            }
+          }
+          geometry Box {
+            size 0.04 0.04 0.04
+          }
+        }
+      ]
+    }
+    DEF EXTENSION_SLOT Group {
+      children [
+        DEF Kinect_Motor HingeJoint {
+          position -6.41967
+        }
+      ]
+    }
+    TouchSensor {
+      translation 0.0006680977076420902 0.0939325274704935 -0.2571103778835644
+      rotation -0.9996617951185646 -0.012856600374100724 -0.02260538004877359 0.18101462559699844
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.5 0
+              shininess 1
+            }
+          }
+          geometry DEF BUMPER Box {
+            size 0.48 0.02 0.01
+          }
+        }
+      ]
+      name "bumper"
+      boundingObject USE BUMPER
+      physics Physics {
+        density 10000
+      }
+      locked TRUE
+      linearVelocity 0.2747251230618587 -0.00023815772639609236 0.06525399542871324
+      angularVelocity 0.0001968106894455387 0.18669591310499403 -0.0015610276010882625
+    }
+    DEF MobileRobot_Emitter Emitter {
+      name "MobileRobot_Emitter"
+    }
+    DEF MobileRobot_Receiver Receiver {
+      name "MobileRobot_Receiver"
+      channel 1
+    }
+    SickLms291 {
+      translation 0 0.22999999999999998 0
+    }
+    Pen {
+      translation 0 0.001 0
+      children [
+        Transform {
+          translation 0 0.07 0
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 1 0.692371 0
+                  shininess 0.5
+                  specularColor 0.98 0.570712 0.0103341
+                }
+              }
+              geometry Cylinder {
+                height 0.14
+                radius 0.004
+              }
+            }
+          ]
+        }
+      ]
+      inkColor 1 0 0
+      inkDensity 1
+      leadSize 0.19999999999999998
+    }
+  ]
+}
